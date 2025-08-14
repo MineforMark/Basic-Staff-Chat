@@ -1,0 +1,40 @@
+# Basic Staff Chat #
+
+# Modes: #
+
+# Normal - Each message is sent individually #
+
+# Toggle - All will be sent automatically if toggled on #
+
+# Coded in Skript #
+# By MineforMark #
+
+options:
+    Permmsg: "You do not have permission to access this command"
+    Prefix: "&3[&2Staff&3]&f"
+
+command /staffchat [<text>]:
+    aliases: /sc
+    permission: staff.chat
+    permission message: "%{@Permmsg}%"
+    trigger:
+        if arg-1 is set:
+            if arg-1 is "toggle":
+                if {scon::%uuid of player%} is not true:
+                    set {scon::%uuid of player%} to true
+                    send "%{@Prefix}% Staff Chat has been enabled!" to player
+                else:
+                    set {scon::%uuid of player%} to false
+                    send "%{@Prefix}% Staff Chat has been disabled!" to player
+            else:
+                loop all players:
+                    if loop-player has permission "staff.chat":
+                        send "%{@Prefix}% %player%: %arg-1%" to loop-player
+        else:
+            make player execute command "staffchat toggle"
+on chat:
+    if {scon::%uuid of player%} is true:
+        cancel event
+        loop all players:
+            if loop-player has permission "staff.chat":
+                send "%{@Prefix}% %player%: %message%" to loop-player
