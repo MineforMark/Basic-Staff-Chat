@@ -14,15 +14,15 @@
 
 ## Visuals:
 
-![Staff Chat Enabled](https://imgur.com/gallery/staffchat-visuals-ii7Wema#OxNEJmY)
-![Staff Chat Disabled](https://imgur.com/gallery/staffchat-visuals-ii7Wema#iicX9Jo)
-![Staff Chat Example](https://imgur.com/gallery/staffchat-visuals-ii7Wema#V0hMfUn)
+![Staff Chat Enabled](https://files.catbox.moe/7pmkst.png)
+![Staff Chat Disabled](https://files.catbox.moe/6rdqeq.png)
+![Staff Chat Example](https://files.catbox.moe/7pmkst.png)
 
 ## Commands:
 
-- /staffchat [<text>]- standard staff chat command, if left blank, will toggle staffchat
+- /staffchat <text>- standard staff chat command, if left blank, will toggle staffchat
 - /staffchat toggle - toggles staff chat, more manual method
-- /sc [<text>] - shortened version, if left blank, will toggle staffchat
+- /sc <text> - shortened version, if left blank, will toggle staffchat
 - /sc toggle - shortened version of toggling staffchat
 
 ## Prefixs:
